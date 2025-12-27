@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web shark</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/media.css">
+</head>
+
+<body>
+    <div class="decor decor--top-left">
+        <img src="/images/left-corner.png" alt="">
+    </div>
+    <div class="decor decor--bottom-right">
+        <img src="/images/right-corner.png" alt="">
+    </div>
+
+    <header class="header__wrap" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container--sm">
+            <div class="header">
+                <a href="/">
+                    <img class="logo" src="/images/logo.svg" alt="">
+                </a>
+                <div class="header__info">
+                    <div class="header__info-top">
+                        <h1 class="user__name">monblanproject</h1>
+                        <a class="header__link" href="#">Start on 17-02-2016</a>
+                    </div>
+                    <div class="account__info">
+                        <p>
+                            <b>870</b>
+                            <span>post</span>
+                        </p>
+                        <p>
+                            <b>11,787 </b>
+                            <span>followers</span>
+                        </p>
+                        <p>
+                            <b>112</b>
+                            <span>following</span>
+                        </p>
+                    </div>
+
+                    <div class="filters__date">
+                        <label class="filters__label">Date</label>
+                        <div class="filters__date-inputs">
+                            <input type="text" class="filters__input" placeholder="from" id="dateFrom">
+                            <input type="text" class="filters__input" placeholder="09_08_2016" id="dateTo">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="container--md">
+                <div class="section__wrap posts__wrap" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="posts__layout-buttons">
+                        <button class="posts__layout-btn posts__layout-btn--active" id="gridBtn">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="6" height="6" fill="#3D8EDA" />
+                                <rect x="8" width="6" height="6" fill="#3D8EDA" />
+                                <rect x="16" width="6" height="6" fill="#3D8EDA" />
+                                <rect y="8" width="6" height="6" fill="#3D8EDA" />
+                                <rect y="16" width="6" height="6" fill="#3D8EDA" />
+                                <rect x="8" y="8" width="6" height="6" fill="#3D8EDA" />
+                                <rect x="8" y="16" width="6" height="6" fill="#3D8EDA" />
+                                <rect x="16" y="8" width="6" height="6" fill="#3D8EDA" />
+                                <rect x="16" y="16" width="6" height="6" fill="#3D8EDA" />
+                            </svg>
+
+                        </button>
+                        <button class="posts__layout-btn" id="listBtn">
+                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="6" height="6" fill="#3D8EDA" />
+                                <rect y="8" width="6" height="6" fill="#3D8EDA" />
+                                <rect y="16" width="6" height="6" fill="#3D8EDA" />
+                                <rect x="9" y="10" width="15" height="2" fill="#3D8EDA" />
+                                <rect x="9" y="18" width="15" height="2" fill="#3D8EDA" />
+                                <rect x="9" y="2" width="15" height="2" fill="#3D8EDA" />
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="posts" id="posts">
+
+                    </div>
+                    <button class="loadmore__btn">LOAD MORE</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/script.js"></script>
+</body>
+
+</html>

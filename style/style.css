@@ -1,0 +1,346 @@
+@import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("./flatpickr-custom.css");
+
+:root {
+    --color-background: #FAFAFA;
+    --color-text: #000000;
+    --color-blue: #3D8EDA;
+    --color-active: #3D8EDA;
+    --color-inactive: #C8C7C7;
+    --color-white: #FFFFFF;
+    --color-border: #E0E0E0;
+    --color-green: #3CA676;
+    --color-dark-green: #19585C;
+    --color-grey: #929292;
+    --color-text-grey: #666;
+    --color-shadow: rgba(0, 0, 0, 0.05);
+    --color-shadow-dark: rgba(0, 0, 0, 0.12);
+    --font-family-base: "roboto", sans-serif;
+    --font-size-base: 1rem;
+    --spacing-base: 1rem;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: 1.2;
+}
+
+.container--sm {
+    max-width: 694px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container--md {
+    max-width: 876px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.decor {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.decor img {
+    object-fit: cover;
+}
+
+.decor--top-left {
+    top: 0;
+    left: 0;
+    width: 46%;
+    height: auto;
+}
+
+.decor--top-left img {
+    width: 100%;
+    height: 100%;
+}
+
+.decor--bottom-right {
+    bottom: 40px;
+    right: 0;
+    width: 18%;
+    height: auto;
+}
+
+.decor--bottom-right img {
+    width: 100%;
+    height: 100%;
+}
+
+.header__wrap {
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.05),
+        inset 0 4px 24px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 86px;
+    padding: 6px 0 28px 0;
+}
+
+.logo{
+    max-width: 138px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.header__info {
+    margin-top: 32px;
+}
+
+.user__name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+}
+
+.header__info-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__link {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    color: var(--color-blue);
+    text-decoration: none;
+    border: var(--color-blue) 1px solid;
+    border-radius: 2px;
+    transition: 0.3s all;
+}
+
+.header__link:hover {
+    background-color: var(--color-blue);
+    color: #FFFFFF;
+}
+
+.account__info {
+    margin-top: 16px;
+    font-size: 0.875rem;
+    display: flex;
+    gap: 28px;
+}
+
+
+.filters__date {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.filters__label {
+    font-size: 16px;
+}
+
+.filters__date-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.filters__input {
+    padding: 8px 20px 8px 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: var(--font-family-base);
+    max-width: 160px;
+    cursor: pointer;
+}
+
+.posts__wrap {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-bottom: 40px;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.post__card {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    flex: 1 1 auto;
+    transition: 0.3s all;
+
+}
+
+.post__card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.post__card-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 80px 24px 30px;
+    height: auto;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #fff;
+    width: 100%;
+}
+
+.post__card-stats {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.post__card-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.post__card-stats-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post__card-stats-item img {
+    width: 18px;
+    height: 18px;
+}
+
+.post__card-image {
+    max-width: 86px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.loadmore__btn {
+    padding: 8px 26px;
+    border: 2px solid #929292;
+    border-radius: 30px;
+    color: #929292;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    transition: 0.3s all;
+}
+
+.loadmore__btn:hover {
+    background-color: #3CA676;
+    border-color: #3CA676;
+    color: #FFFFFF;
+}
+
+.posts__layout-buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.posts__layout-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.posts__layout-btn svg rect {
+    transition: 0.3s all;
+    fill: var(--color-inactive);
+}
+
+.posts__layout-btn--active svg rect {
+    fill: var(--color-active);
+}
+
+.posts--grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.posts--grid .post__card {
+    flex-direction: column;
+}
+
+.posts--grid .post__card-image {
+    max-width: 100%;
+    width: 100%;
+}
+
+.posts--grid .post__card-info {
+    padding: 12px 12px 18px 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+}
+
+.posts--grid .post__card-info .post__card-info-item:nth-child(1),
+.posts--grid .post__card-info .post__card-info-item:nth-child(2) {
+    grid-row: 1;
+}
+
+.posts--grid .post__card-info .post__card-info-item:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posts--grid  .post__card-stats{
+    flex-direction: column;
+    gap: 8px;
+}
+
+.posts--grid .post__card-upload{
+    font-size: 0.875rem;
+}
+
+.posts--grid .post__card-date{
+    font-size: 0.75rem;
+}
+
+.posts--list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.posts--list .post__card {
+    flex-direction: row;
+}
+
+.posts--list .post__card-image {
+    max-width: 86px;
+    width: 86px;
+    height: auto;
+}
+
