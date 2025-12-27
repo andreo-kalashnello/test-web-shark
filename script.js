@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function loadPosts() {
         try {
-            const response = await fetch('/data.json');
+            const response = await fetch('./data.json');
             const data = await response.json();
             allPosts = data.posts;
             renderPosts();
@@ -72,11 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>${post.label}</p>
                         <div class="post__card-stats">
                             <div class="post__card-stats-item">
-                                <img src="/images/like.svg" alt="">
+                                <img src="./images/like.svg" alt="">
                                 <span>${post.likes1}</span>
                             </div>
                             <div class="post__card-stats-item">
-                                <img src="/images/comment.svg" alt="">
+                                <img src="./images/comment.svg" alt="">
                                 <span>${post.comments1}</span>
                             </div>
                         </div>
@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>${post.date}</p>
                         <div class="post__card-stats">
                             <div class="post__card-stats-item">
-                                <img src="/images/like.svg" alt="">
+                                <img src="./images/like.svg" alt="">
                                 <span>${post.likes2}</span>
                             </div>
                             <div class="post__card-stats-item">
-                                <img src="/images/comment.svg" alt="">
+                                <img src="./images/comment.svg" alt="">
                                 <span>${post.views}</span>
                             </div>
                         </div>
