@@ -66,17 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
             postCard.href = '#';
 
             postCard.innerHTML = `
-                <img class="post__card-image" src="${post.image}" alt="">
+                <img class="post__card-image" src="${post.image}" alt="Post image from ${post.date}">
                 <div class="post__card-info">
                     <div class="post__card-info-item">
                         <p>${post.label}</p>
                         <div class="post__card-stats">
                             <div class="post__card-stats-item">
-                                <img src="./images/like.svg" alt="">
+                                <img src="./images/like.svg" alt="Likes icon">
                                 <span>${post.likes1}</span>
                             </div>
                             <div class="post__card-stats-item">
-                                <img src="./images/comment.svg" alt="">
+                                <img src="./images/comment.svg" alt="Comments icon">
                                 <span>${post.comments1}</span>
                             </div>
                         </div>
@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>${post.date}</p>
                         <div class="post__card-stats">
                             <div class="post__card-stats-item">
-                                <img src="./images/like.svg" alt="">
+                                <img src="./images/like.svg" alt="Likes icon">
                                 <span>${post.likes2}</span>
                             </div>
                             <div class="post__card-stats-item">
-                                <img src="./images/comment.svg" alt="">
+                                <img src="./images/comment.svg" alt="Views icon">
                                 <span>${post.views}</span>
                             </div>
                         </div>
